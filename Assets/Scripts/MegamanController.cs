@@ -33,7 +33,7 @@ public class MegamanController : MonoBehaviour
         PlayerDebugInput();
     }
 
-    void SelectColorScheme(int primaryColor, int secondColor)
+    void SelectColorScheme(int primaryColor, int secondaryColor)
     {
         /* ColorSwap and Shader to change MegaMan's color scheme
          * 
@@ -65,7 +65,7 @@ public class MegamanController : MonoBehaviour
          */
         // swap color
         colorSwap.SwapColor((int)SwapIndex.Primary, ColorSwap.ColorFromInt(primaryColor));
-        colorSwap.SwapColor((int)SwapIndex.Secondary, ColorSwap.ColorFromInt(secondColor));
+        colorSwap.SwapColor((int)SwapIndex.Secondary, ColorSwap.ColorFromInt(secondaryColor));
         colorSwap.ApplyColor();
     }
 
@@ -79,7 +79,7 @@ public class MegamanController : MonoBehaviour
         {
             case PlayerWeapons.Default:
                 // dark blue, light blue; the player weapon energy doesn't apply but we'll just set the default and hide it
-                SelectColorScheme(0x0073F7, 0x00FFF);
+                SelectColorScheme(0x0073F7, 0x00FFFF);
                 break;
             case PlayerWeapons.MagnetBeam:
                 // dark blue, light blue

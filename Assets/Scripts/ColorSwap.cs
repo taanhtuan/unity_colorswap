@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.U2D;
 
 /*
  * Comes from this article with some minor changes by me
